@@ -70,6 +70,15 @@ def modify_entry
 end
 def delete_entry
     selectEntry("delete")    
+    selectionEntry = gets.chomp
+    print $addressEntry[[selectionEntry, 0]]
+    print "confirm choice Y/N "
+    choice = gets.chomp
+    if choice === "Y" or choice === "y" 
+        puts "Removing record .."        
+    else
+        main_menu
+    end
 end
 
 def create_entry
