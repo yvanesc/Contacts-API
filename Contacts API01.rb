@@ -47,10 +47,30 @@ def main_menu
 end
 
 def view_all_entries
+    for j in 0..$glIndex
+        for i in 0..4
+            print $addressEntry[[j, i]] + " ,"
+        end
+        puts ""
+    end
 end
 def modify_entry
+    for j in 0..$glIndex
+        for i in 0..4
+            print j + " : " +$addressEntry[[j, i]] + " "
+        end
+        puts ""
+    end
+    puts "Select which entry to modify (0 to" + j ")"
 end
 def delete_entry
+    for j in 0..$glIndex
+        for i in 0..4
+            print j + " : " +$addressEntry[[j, i]] + " "
+        end
+        puts ""
+    end
+    puts "Select which entry to delete (0 to" + j ")"
 end
 
 def create_entry
