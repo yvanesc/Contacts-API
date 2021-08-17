@@ -54,22 +54,22 @@ def view_all_entries
         puts ""
     end
 end
+def selectEntry(type)    
     for j in 0..$glIndex - 1
+        line2Display = ""
         for i in 0..4
-            print j + " : " +$addressEntry[[j, i]] + " "
+            line2Display = line2Display + $addressEntry[[j, i]] + " ** "
         end
+        print j.to_s + " : " + line2Display
         puts ""
     end
-    puts "Select which entry to modify (0 to" + j.to_s + ")"
+    puts "Select which entry to " + type +" (0 to " + j.to_s + ")"
+end
+def modify_entry
+    selectEntry("modify")
 end
 def delete_entry
-    for j in 0..$glIndex - 1
-        for i in 0..4
-            print j + " : " + $addressEntry[[j, i]] + " "
-        end
-        puts ""
-    end
-    puts "Select which entry to delete (0 to" + j.to_s + ")"
+    selectEntry("delete")    
 end
 
 def create_entry
@@ -87,20 +87,7 @@ def create_entry
     $addressEntry[[$glIndex,3]] = gets.chomp
     print "Phone number: "
     $addressEntry[[$glIndex,4]] = gets.chomp
-    
-    #unless email.include? "@"
-    #    print "No"
-    #    #break 
-    #end
-    
-    
-    #puts $addressEntry
-    for j in 0..$glIndex
-        for i in 0..4
-            print $addressEntry[[j, i]] + " ,"
-        end
-        puts ""
-    end
+
     $glIndex = $glIndex + 1
     system "clear"
     puts ""
