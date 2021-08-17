@@ -94,9 +94,6 @@ def create_entry
     #    #break 
     #end
     
-    #addressEntry << [firstname, lastname, address, email, phone ]
-    #addressIndex = addressIndex + 1
-    #address_book.add_entry(name, phone, email)
     
     #puts $addressEntry
     for j in 0..$glIndex
