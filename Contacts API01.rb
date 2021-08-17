@@ -54,7 +54,6 @@ def view_all_entries
         puts ""
     end
 end
-def modify_entry
     for j in 0..$glIndex - 1
         for i in 0..4
             print j + " : " +$addressEntry[[j, i]] + " "
